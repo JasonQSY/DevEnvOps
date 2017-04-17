@@ -20,15 +20,12 @@ deb http://ftp.sjtu.edu.cn/ubuntu xenial-security multiverse
 EOT
 
 echo "update and upgrade..."
-sudo apt-get update
-sudo apt-get upgrade
+apt-get update
+apt-get upgrade -y
 
 echo "Install essential toolchains..."
-sudo apt-get install build-essential
-sudo apt-get install git curl vim zsh
-
-echo "Configure on-my-zsh..."
-
+apt-get install -y build-essential cmake
+apt-get install -y curl wget vim
 
 echo "[Success] Basic toolchains installed."
 
